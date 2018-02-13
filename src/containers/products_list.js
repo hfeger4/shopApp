@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { selectProduct } from '../actions/index';
+import Masonry from 'react-masonry-component';
 
 class ProductsList extends Component{
   renderList(){
