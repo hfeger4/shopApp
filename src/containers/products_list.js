@@ -10,11 +10,11 @@ class ProductsList extends Component{
     return this.props.products.map((product) => {
       let url = `src/images/${product.filename}`;
       return(
-        <li
+        <li className="polaroid"
             key={product.name + product.price}
             onClick={ () => this.props.selectProduct(product)}>
             <img className="images" src={url}/>
-            {product.name}
+            <div className="name">{product.name}</div>
         </li>
       );
     });
