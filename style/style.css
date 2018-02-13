@@ -9,6 +9,17 @@
   padding-right: 1em;
 }
 
-.cart{
-  
+.pics{
+  width: 30px;
+}
+
+.images{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+.list-pictures{
+  display: flex;
 }

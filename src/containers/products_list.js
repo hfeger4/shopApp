@@ -4,14 +4,17 @@ import { bindActionCreators } from 'redux';
 import { selectProduct } from '../actions/index';
 import Masonry from 'react-masonry-component';
 
+
 class ProductsList extends Component{
   renderList(){
     return this.props.products.map((product) => {
+      let url = `src/images/${product.filename}`;
       return(
         <li
             key={product.name + product.price}
-            onClick={ () => this.props.selectProduct(product)}
-            className="list-group-item">{product.name}
+            onClick={ () => this.props.selectProduct(product)}>
+            <img className="images" src={url}/>
+            {product.name}
         </li>
       );
     });
@@ -21,7 +24,7 @@ class ProductsList extends Component{
     return(
       <div>
       <div>Shop our featured collection</div>
-        <ul className="list-group col-sm-4">
+        <ul className="list-pictures">
         {this.renderList()}
         </ul>
       </div>
