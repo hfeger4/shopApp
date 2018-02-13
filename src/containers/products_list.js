@@ -8,13 +8,18 @@ import Masonry from 'react-masonry-component';
 class ProductsList extends Component{
   renderList(){
     return this.props.products.map((product) => {
-      let url = `src/images/${product.filename}`;
+      const url = `src/images/${product.filename}`;
+      const priceDisplay= "$" + product.price/100;
       return(
         <li className="polaroid"
             key={product.name + product.price}
             onClick={ () => this.props.selectProduct(product)}>
             <img className="images" src={url}/>
-            <div className="name">{product.name}</div>
+            <div className="name">
+              <div>{product.name}</div>
+              <div>{priceDisplay}</div>
+              <button>Add to Cart</button>
+            </div>
         </li>
       );
     });
@@ -23,7 +28,7 @@ class ProductsList extends Component{
   render(){
     return(
       <div>
-      <div>Shop our featured collection</div>
+        <h2>Shop our featured collection</h2>
         <ul className="list-pictures">
         {this.renderList()}
         </ul>
