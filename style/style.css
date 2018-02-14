@@ -104,6 +104,7 @@ h2{
   background-color: white;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 1px solid gray;
+  border-radius: 4px;
 }
 
 .polaroid:hover{
@@ -119,11 +120,22 @@ h2{
   justify-content: center;
   align-items: center;
 }
-
 button{
   padding: 5px;
   margin: 5px;
   border: 1px solid gray;
   border-radius: 4px;
   color: gray;
+}
+
+button:hover{
+  border-color: blue;
+}
+
+.cart{
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  color: white;
 }

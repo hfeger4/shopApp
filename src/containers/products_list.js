@@ -12,13 +12,12 @@ class ProductsList extends Component{
       const priceDisplay= "$" + product.price/100;
       return(
         <li className="polaroid"
-            key={product.name + product.price}
-            onClick={ () => this.props.selectProduct(product)}>
+            key={product.name + product.price}>
             <img className="images" src={url}/>
             <div className="name">
               <div>{product.name}</div>
               <div>{priceDisplay}</div>
-              <button>Add to Cart</button>
+              <button onClick={ () => this.props.selectProduct(product)}>Add to Cart</button>
             </div>
         </li>
       );
